@@ -1,0 +1,24 @@
+.Home h1 {
+    text-align: center;
+}
+
+.Home .dice-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Home .dice-list .dice {
+    width: 25%;
+    text-align: center;
+}
+
+.Home img {
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.Home img:hover {
+    width: 240px;
+    border: 4px solid black;
+}

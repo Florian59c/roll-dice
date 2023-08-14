@@ -1,4 +1,5 @@
 export default interface TypeOfDiceInterface {
     name: string,
-    faces: number
+    faces: number,
+    img: string
 }
