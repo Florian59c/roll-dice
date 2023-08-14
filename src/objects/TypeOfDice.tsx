@@ -1,4 +1,6 @@
-const typeOfDice = [
+import TypeOfDiceInterface from "../interfaces/TypeOfDiceInterface";
+
+const typeOfDice: TypeOfDiceInterface[] = [
     {
         name: "dé2",
         faces: 2
