@@ -1,9 +1,17 @@
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Home from './screens/Home';
+import RollDice from './screens/RollDice';
+import NotFound from './screens/NotFound';
 
 function App() {
   return (
     <div className="App">
-      <p>dé</p>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/roll-dice" element={<RollDice />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
