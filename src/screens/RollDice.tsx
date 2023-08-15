@@ -4,7 +4,7 @@ import typeOfDice from '../objects/TypeOfDice';
 
 function RollDice() {
 
-    const { name } = useParams();
+    const { name } = useParams<{ name?: string }>();
 
     const dice = typeOfDice.find((dice) => {
         return dice.name === name;
