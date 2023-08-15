@@ -1,0 +1,41 @@
+.RollDice {
+    margin-top: 50px;
+}
+
+.RollDice .roll-container,
+.RollDice .roll-button {
+    display: flex;
+    justify-content: center;
+}
+
+.RollDice .roll-container {}
+
+.RollDice .roll .face-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RollDice .roll .face-img img,
+.RollDice .roll .void-face {
+    width: 250px;
+    height: 250px;
+    background-color: aliceblue;
+    border: 4px solid #929AAB;
+    border-radius: 20px;
+}
+
+.RollDice .roll .void-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RollDice .roll .void-face h1 {
+    margin: 0;
+    font-size: 150px;
+}
+
+.RollDice .roll-button {
+    margin-top: 20px;
+}
