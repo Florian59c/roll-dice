@@ -8,8 +8,6 @@
     justify-content: center;
 }
 
-.RollDice .roll-container {}
-
 .RollDice .roll .face-img {
     display: flex;
     justify-content: center;

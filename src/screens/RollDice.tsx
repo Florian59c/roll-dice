@@ -12,15 +12,11 @@ function RollDice() {
     const dice = typeOfDice.find((dice) => {
         return dice.name === name;
     });
-    const [picture, setPicture] = useState("");
 
     function roll() {
         if (typeof dice?.faces !== "undefined") {
             setNbFace(dice?.faces);
             setFace(Math.floor(Math.random() * nbFace) + 1);
-            setPicture(`D${nbFace}F${face}`);
-            console.log(picture);
-
         } else {
             console.error("Une erreur est survenue lors de la récupération du type de dé");
         }
