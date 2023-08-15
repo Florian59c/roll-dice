@@ -1,0 +1,52 @@
+.Home h1 {
+    text-align: center;
+}
+
+.Home p {
+    margin: 20px 0 10px 0;
+}
+
+.Home img {
+    width: 250px;
+    border: 2px solid #929AAB;
+    border-radius: 20px;
+}
+
+.Home img:hover {
+    width: 246px;
+    border-width: 4px;
+}
+
+.Home .dice-list {
+    text-align: center;
+}
+
+/* pour les ecran superieur au mobile */
+@media screen and (min-width: 580px) {
+    .Home .dice-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Home .dice-list .dice {
+        width: 50%;
+        text-align: center;
+    }
+
+    .Home img:hover {
+        width: 240px;
+    }
+}
+
+/* pour les ecran superieur au mobile ET tablettes */
+@media screen and (min-width: 1080px) {
+    .Home .dice-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Home .dice-list .dice {
+        width: 25%;
+        text-align: center;
+    }
+}
