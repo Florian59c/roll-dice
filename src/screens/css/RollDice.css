@@ -16,12 +16,19 @@
 }
 
 .RollDice .roll .face-img img,
+.RollDice .roll .face-img video,
 .RollDice .roll .void-face {
     width: 250px;
     height: 250px;
     background-color: #FFFFFF;
     border: 4px solid #929AAB;
     border-radius: 20px;
+}
+
+
+.RollDice .roll .face-img video {
+    /* option pour que la video fasse la taille du parent (elle remplie donc le cube) */
+    object-fit: cover;
 }
 
 .RollDice .roll .void-face {
