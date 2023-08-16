@@ -14,10 +14,15 @@ function RollDice() {
         return dice.name === name;
     });
 
+
+    const [isPlay, setIsPlay] = useState<boolean>(false);
+
+
     function roll() {
         if (typeof dice?.faces !== "undefined") {
             setNbFace(dice?.faces);
             setFace(Math.floor(Math.random() * nbFace) + 1);
+            setIsPlay(true);
         } else {
             console.error("Une erreur est survenue lors de la récupération du type de dé");
         }
@@ -37,9 +42,19 @@ function RollDice() {
                     <div className='roll-container'>
                         {face > 0 ? (
                             <div>
-                                <h1>Le résultat du dé est : {face}</h1>
+                                <h1>Le résultat du dé est :</h1>
+                                {/* <h1>Le résultat du dé est : {face}</h1> */}
                                 <div className='face-img'>
-                                    <img src={require(`../img/D${nbFace}/D${nbFace}-${face}.png`)} alt={`face ${face} du dé ${nbFace}`} />
+                                    {isPlay ? (
+                                        <video
+                                            src={require(`../video/Many-roll-dice.mp4`)}
+                                            onEnded={() => { setIsPlay(false) }}
+                                            autoPlay
+                                            muted
+                                        ></video>
+                                    ) : (
+                                        <img src={require(`../img/D${nbFace}/D${nbFace}-${face}.png`)} alt={`face ${face} du dé ${nbFace}`} />
+                                    )}
                                 </div>
                             </div>
                         ) : (
@@ -63,8 +78,9 @@ function RollDice() {
                         </div>
                     </div>
                 </div>
-            )}
-        </div>
+            )
+            }
+        </div >
     );
 }
 
