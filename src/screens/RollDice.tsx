@@ -35,17 +35,17 @@ function RollDice() {
                 <div className='roll'>
                     <div className='roll-container'>
                         {face > 0 ? (
-                            nbFace === 2 ? (
+                            <div>
+                                <h1>Le résultat du dé est : {face}</h1>
                                 <div className='face-img'>
                                     <img src={require(`../img/D${nbFace}/D${nbFace}-${face}.png`)} alt={`face ${face} du dé ${nbFace}`} />
                                 </div>
-                            ) : (
-                                <div className='void-face'>
-                                    <h1>{face}</h1>
-                                </div>
-                            )
+                            </div>
                         ) : (
-                            <div className='void-face'></div>
+                            <div>
+                                <h1>Aucun lancé</h1>
+                                <div className='void-face'></div>
+                            </div>
                         )}
                     </div>
                     <div className='roll-button'>
