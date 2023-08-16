@@ -26,7 +26,7 @@ function RollDice() {
     return (
         <div className="RollDice">
             {typeof dice === "undefined" ? (
-                <div>
+                <div className='error-dice'>
                     <h1>Une erreur est survenue lors de la récupération du type de dé</h1>
                     <Link to="/">
                         <button>Retourner à la page d'accueil</button>
