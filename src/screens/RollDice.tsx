@@ -50,11 +50,17 @@ function RollDice() {
                         )}
                     </div>
                     <div className='roll-button'>
-                        <button onClick={roll}>Lancer le dé</button>
-                        <button onClick={() => setFace(0)}>réinitialiser le dé</button>
-                        <Link to="/">
-                            <button>Changer de dé</button>
-                        </Link>
+                        <div>
+                            <button onClick={roll}>Lancer le dé</button>
+                        </div>
+                        <div>
+                            <button onClick={() => setFace(0)}>réinitialiser le dé</button>
+                        </div>
+                        <div>
+                            <Link to="/">
+                                <button>Changer de dé</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             )}
