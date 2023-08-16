@@ -3,13 +3,14 @@ import './css/RollDice.css';
 import typeOfDice from '../objects/TypeOfDice';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import TypeOfDiceInterface from '../interfaces/TypeOfDiceInterface';
 
 function RollDice() {
 
-    const [nbFace, setNbFace] = useState(0);
-    const [face, setFace] = useState(0);
+    const [nbFace, setNbFace] = useState<number>(0);
+    const [face, setFace] = useState<number>(0);
     const { name } = useParams<{ name?: string }>();
-    const dice = typeOfDice.find((dice) => {
+    const dice: TypeOfDiceInterface | undefined = typeOfDice.find((dice) => {
         return dice.name === name;
     });
 
