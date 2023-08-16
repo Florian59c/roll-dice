@@ -1,3 +1,8 @@
+* {
+  /* faire en sorte que la bordure et le padding soient calculés a l interieur du conteneur -> on change le mode de calcul du conteneur */
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -24,4 +29,41 @@ h1 {
 
 p {
   font-size: 20px;
+}
+
+button {
+  width: 250px;
+  border: 4px solid #929AAB;
+  border-radius: 20px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  color: #393E46;
+  font-size: 25px;
+  font-weight: bold;
+  box-shadow: 4px 4px 4px #929AAB;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #F7F7F7;
+  border-width: 6px;
+  padding: 8px 0 9px 0;
+  text-shadow: 1px 1px 5px #929AAB;
+}
+
+/* pour les ecran superieur au mobile */
+@media screen and (min-width: 580px) {
+  button {
+    width: 500px;
+    font-size: 50px;
+    border-width: 8px;
+    border-radius: 40px;
+  }
+
+  button:hover {
+    border-width: 12px;
+    padding: 6px 0;
+    text-shadow: 2px 2px 5px #929AAB;
+  }
 }
