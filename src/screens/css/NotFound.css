@@ -1,0 +1,11 @@
+.NotFound {
+    text-align: center;
+}
+
+.NotFound h1 {
+    margin: 0;
+}
+
+.NotFound div {
+    margin: 20px 0;
+}
