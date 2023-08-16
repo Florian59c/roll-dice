@@ -13,10 +13,7 @@ function RollDice() {
     const dice: TypeOfDiceInterface | undefined = typeOfDice.find((dice) => {
         return dice.name === name;
     });
-
-
     const [isPlay, setIsPlay] = useState<boolean>(false);
-
 
     function roll() {
         if (typeof dice?.faces !== "undefined") {
@@ -45,6 +42,7 @@ function RollDice() {
                                 <h1>Le résultat du dé est :</h1>
                                 {/* <h1>Le résultat du dé est : {face}</h1> */}
                                 <div className='face-img'>
+                                    {/* au clic sur le bouton, la video se lance automatiquement et sans son. Losrqu'elle se termine, isplay repasse a false, et la video est remplacé par l'image avec le résultat du lancé du dé */}
                                     {isPlay ? (
                                         <video
                                             src={require(`../video/Many-roll-dice.mp4`)}
