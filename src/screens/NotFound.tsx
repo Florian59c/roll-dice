@@ -6,10 +6,10 @@ function NotFound() {
         <div className="NotFound">
             <div>
                 <h1>404</h1>
-                <h1>La page n'a pas été trouvé !</h1>
+                <h1>La page n'a pas été trouvée !</h1>
             </div>
             <Link to="/">
-                <button>Retourner à la page d'acceuil</button>
+                <button>Retourner à la page d'accueil</button>
             </Link>
         </div>
     );

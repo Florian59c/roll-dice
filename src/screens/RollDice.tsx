@@ -54,7 +54,7 @@ function RollDice() {
                             <button onClick={roll}>Lancer le dé</button>
                         </div>
                         <div>
-                            <button onClick={() => setFace(0)}>réinitialiser le dé</button>
+                            <button onClick={() => setFace(0)}>Réinitialiser le dé</button>
                         </div>
                         <div>
                             <Link to="/">
