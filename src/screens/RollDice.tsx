@@ -7,18 +7,16 @@ import TypeOfDiceInterface from '../interfaces/TypeOfDiceInterface';
 
 function RollDice() {
 
-    const [nbFace, setNbFace] = useState<number>(0);
-    const [face, setFace] = useState<number>(0);
     const { name } = useParams<{ name?: string }>();
     const dice: TypeOfDiceInterface | undefined = typeOfDice.find((dice) => {
         return dice.name === name;
     });
+    const [face, setFace] = useState<number>(0);
     const [isPlay, setIsPlay] = useState<boolean>(false);
 
     function roll() {
         if (typeof dice?.faces !== "undefined") {
-            setNbFace(dice?.faces);
-            setFace(Math.floor(Math.random() * nbFace) + 1);
+            setFace(Math.floor(Math.random() * dice.faces) + 1);
             setIsPlay(true);
         } else {
             console.error("Une erreur est survenue lors de la récupération du type de dé");
@@ -51,7 +49,10 @@ function RollDice() {
                                             muted
                                         ></video>
                                     ) : (
-                                        <img src={require(`../img/D${nbFace}/D${nbFace}-${face}.png`)} alt={`face ${face} du dé ${nbFace}`} />
+                                        <img
+                                            src={require(`../img/D${dice.faces}/D${dice.faces}-${face}.png`)}
+                                            alt={`face ${face} du dé ${dice.faces}`}
+                                        />
                                     )}
                                 </div>
                             </div>
@@ -76,8 +77,7 @@ function RollDice() {
                         </div>
                     </div>
                 </div>
-            )
-            }
+            )}
         </div >
     );
 }
