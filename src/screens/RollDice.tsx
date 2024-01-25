@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import TypeOfDiceInterface from '../interfaces/TypeOfDiceInterface';
 
-function RollDice() {
+export function RollDice() {
 
     const { name } = useParams<{ name?: string }>();
     const dice: TypeOfDiceInterface | undefined = typeOfDice.find((dice) => {
