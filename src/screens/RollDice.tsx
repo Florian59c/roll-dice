@@ -37,8 +37,7 @@ function RollDice() {
                     <div className='roll-container'>
                         {face > 0 ? (
                             <div>
-                                <h1>Le résultat du dé est :</h1>
-                                {/* <h1>Le résultat du dé est : {face}</h1> */}
+                                <h1>Le résultat du dé est : {isPlay ? "" : face}</h1>
                                 <div className='face-img'>
                                     {/* au clic sur le bouton, la video se lance automatiquement et sans son. Losrqu'elle se termine, isplay repasse a false, et la video est remplacé par l'image avec le résultat du lancé du dé */}
                                     {isPlay ? (
